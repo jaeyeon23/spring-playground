@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: awss3
+  cloud:
+    config:
+      server:
+        awss3:
+          bucket: my-bucket
+          region: ap-northeast-2
+# actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
