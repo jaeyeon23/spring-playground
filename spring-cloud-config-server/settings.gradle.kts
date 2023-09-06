@@ -1,1 +1,1 @@
-rootProject.name = "configserver"
+rootProject.name = "spring-cloud-config-server"
