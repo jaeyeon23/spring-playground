@@ -7,14 +7,5 @@ spring:
     config:
       server:
         awss3:
-          bucket: my-bucket
           region: ap-northeast-2
-# actuator 설정
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    shutdown:
-      enabled: true
+          bucket: my-bucket
