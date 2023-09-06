@@ -1,0 +1,21 @@
+server:
+  port: 8889
+spring:
+  profiles:
+    active: dev
+  config:
+    import: "optional:configserver:http://localhost:8888/"
+  cloud:
+    config:
+      name: application
+      profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 2
+# actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
